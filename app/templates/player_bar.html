@@ -24,7 +24,7 @@
              <h2 class="artist-song-mobile">{{playerBar.songPlayer.currentSong.name}} - {{playerBar.albumData.artist}}</h2>
              <h3 class="artist-name">{{ playerBar.albumData.artist }}</h3>
              <div class="seek-control">
-                 <seek-bar></seek-bar>
+                 <seek-bar value="{{ playerBar.songPlayer.currentTime }}" max="{{ playerBar.songPlayer.currentSong.length }}" on-change="playerBar.songPlayer.setCurrentTime(value)"></seek-bar>
                  <div class="current-time"></div>
                  <div class="total-time">{{playerBar.songPlayer.currentSong.length}}</div>
              </div>
@@ -34,4 +34,4 @@
              <seek-bar></seek-bar>
          </div>
      </div>
- </section>
+ </section> 
